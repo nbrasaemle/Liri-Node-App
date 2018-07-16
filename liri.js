@@ -15,8 +15,8 @@ var command = process.argv[2];
 var args = process.argv.slice(3).join('+');
 runApp(command, args);
 function runApp(command, args) {
-    console.log(command + args);
-    
+    // console.log(command + args);
+
     switch (command) {
         case "my-tweets":
             tweets();
@@ -54,10 +54,14 @@ function tweets() {
     client.get('statuses/home_timeline', function (error, tweets, response) {
         if (!error) {
             tweets.forEach(tweet => {
-                console.log("User Name: " + tweet.user.name);
-                console.log("Tweet Time: " + tweet.created_at);
-                console.log("Tweet Content: " + tweet.text);
-            });
+                
+                let username = tweet.user.name;
+                let tweetTime = tweet.created_at;
+                let tweetText = tweet.text;
+
+                console.log("\nUsername: " + username + "\nTweet Time: " + tweetTime + "\nTweet Content: " + tweetText);
+    
+             });
         }
         else {
             console.log("No Tweets to Show")
@@ -68,8 +72,8 @@ function tweets() {
 
 //Spotify Function
 function spotify(args) {
-    console.log(args);
-    
+    // console.log(args);
+
     const spotify = new Spotify(keys.spotify);
     spotify.search({ type: 'track', query: args, limit: 1 }, function (err, data) {
         if (err) {
@@ -77,10 +81,13 @@ function spotify(args) {
         }
         else {
             // var obj = JSON.parse(data)
-            console.log("Artists: " + data.tracks.items[0].album.artists[0].name);
-            console.log("Song Name: " + data.tracks.items[0].name);
-            console.log("Preview Link: " + data.tracks.items[0].preview_url);
-            console.log("Album Name: " + data.tracks.items[0].album.name);
+            let artists = data.tracks.items[0].album.artists[0].name;
+            let songTitle =data.tracks.items[0].name;
+            let link = data.tracks.items[0].preview_url;
+            let album = data.tracks.items[0].album.name;
+
+            console.log("\nArtists: " + artists + "\nSong Name: " + songTitle + "\nPreview Link: " + link + "\nAlbum Name: " + album);
+
         }
     });
 }
@@ -93,15 +100,20 @@ function movie(args) {
         if (!err && response.statusCode === 200) {
 
             var obj = JSON.parse(data)
-            console.log("")
-            console.log("Title: " + obj.Title);
-            console.log("Release Year: " + obj.Year);
-            console.log("IMDB Rating: " + obj.imdbRating);
-            console.log("Rotten Tomatoes rating: " + obj.Ratings[1].Value);
-            console.log("Production Location: " + obj.Country);
-            console.log("Language: " + obj.Language);
-            console.log("Movie Plot: " + obj.Plot);
-            console.log("Main Actors: " + obj.Actors);
+
+            let movieTitle = obj.Title;
+            let releaseYear = obj.Year;
+            let imdb = obj.imdbRating;
+            let rtRating = obj.Ratings[1].Value;
+            let location = obj.Country;
+            let language = obj.Language
+            let plot = obj.Plot;
+            let actors = obj.Actors;
+
+            console.log("\nTitle: " + movieTitle + "\nRelease Year: " + releaseYear + 
+                "\nIMDB Rating: " + imdb + "\nRotten Tomatoes rating: " + rtRating + 
+                "\nProduction Location: " + location + "\nLanguage: " + language + "\nMovie Plot: " + plot + "\nMain Actors: " + actors);
+
         }
     });
 
