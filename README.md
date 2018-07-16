@@ -1,2 +1,2 @@
 # Liri-Node-App
-an application for node similar to siri
+An application for node similar to siri, but it prints to the console twitter, spotify, and OMDB files
