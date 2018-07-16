@@ -15,6 +15,8 @@ var command = process.argv[2];
 var args = process.argv.slice(3).join('+');
 runApp(command, args);
 function runApp(command, args) {
+    console.log(command + args);
+    
     switch (command) {
         case "my-tweets":
             tweets();
@@ -65,7 +67,9 @@ function tweets() {
 }
 
 //Spotify Function
-function spotify() {
+function spotify(args) {
+    console.log(args);
+    
     const spotify = new Spotify(keys.spotify);
     spotify.search({ type: 'track', query: args, limit: 1 }, function (err, data) {
         if (err) {
