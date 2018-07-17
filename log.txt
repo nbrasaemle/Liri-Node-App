@@ -1,0 +1,63 @@
+my-tweets
+- - - - - - - - -
+Username: Nicole
+Tweet Time: Tue Jul 17 04:35:39 +0000 2018
+Tweet Content: hopefully got liri done
+-------------------------------------------------------------------------------
+Username: Nicole
+Tweet Time: Thu Jul 12 21:02:10 +0000 2018
+Tweet Content: portfolio looking great, needs a few fixes still
+-------------------------------------------------------------------------------
+Username: Nicole
+Tweet Time: Thu Jul 12 21:01:32 +0000 2018
+Tweet Content: Let's do this portfolio
+-------------------------------------------------------------------------------
+Username: Nicole
+Tweet Time: Thu Jul 12 21:09:10 +0000 2018
+Tweet Content: working on liri
+-------------------------------------------------------------------------------
+do-what-it-says
+- - - - - - - - -
+do-what-it-says
+- - - - - - - - -
+Artists: Backstreet Boys
+Song Name: I Want It That Way
+Preview Link: https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=8fffb4dce500486fb333de81c84fb78f
+Album Name: The Hits--Chapter One
+-------------------------------------------------------------------------------
+spotify-this-song
+- - - - - - - - -
+Artists: Eluveitie
+Song Name: The Call Of The Mountains
+Preview Link: https://p.scdn.co/mp3-preview/1ba37e94e14aba11967c6ea331cf57f12c1293f9?cid=8fffb4dce500486fb333de81c84fb78f
+Album Name: Origins
+-------------------------------------------------------------------------------
+spotify-this-song
+- - - - - - - - -
+Artists: Green Day
+Song Name: 21 Guns
+Preview Link: https://p.scdn.co/mp3-preview/9139658121b115dac9d893ba0cbe537c9995b090?cid=8fffb4dce500486fb333de81c84fb78f
+Album Name: 21st Century Breakdown
+-------------------------------------------------------------------------------
+movie-this
+- - - - - - - - -
+Title: Mr. Nobody
+Release Year: 2009
+IMDB Rating: 7.9
+Rotten Tomatoes rating: 66%
+Production Location: Belgium, Germany, Canada, France, USA, UK
+Language: English, Mohawk
+Movie Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+Main Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+-------------------------------------------------------------------------------
+movie-this
+- - - - - - - - -
+Title: Moana
+Release Year: 2016
+IMDB Rating: 7.6
+Rotten Tomatoes rating: 96%
+Production Location: USA
+Language: English
+Movie Plot: In Ancient Polynesia, when a terrible curse incurred by the Demigod Maui reaches Moana's island, she answers the Ocean's call to seek out the Demigod to set things right.
+Main Actors: Auli'i Cravalho, Dwayne Johnson, Rachel House, Temuera Morrison
+-------------------------------------------------------------------------------

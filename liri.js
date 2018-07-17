@@ -106,7 +106,7 @@ function spotify(args) {
             fs.appendFile("log.txt", songData + divider, function (err) {
                 if (err) throw err;
             });
-
+            
             console.log(songData);
 
         }
