@@ -9,7 +9,8 @@ const request = require('request');
 
 //Keys being used
 
-
+const divider = "\n-------------------------------------------------------------------------------\n";
+const divS = "\n- - - - - - - - -\n"
 
 var command = process.argv[2];
 var args = process.argv.slice(3).join('+');
@@ -19,18 +20,15 @@ function runApp(command, args) {
 
     switch (command) {
         case "my-tweets":
+            printCommand();
             tweets();
             break;
         case "spotify-this-song":
-            if (args === "") {
-                args = "Ace of Base: The Sign";
-                spotify(args);
-            }
-            else {
-                spotify(args);
-            }
+            printCommand();
+            spotify(args);
             break;
         case "movie-this":
+            printCommand();
             if (args === "") {
                 args = "Mr. Nobody";
                 movie(args);
@@ -40,6 +38,7 @@ function runApp(command, args) {
             }
             break;
         case "do-what-it-says":
+            printCommand();
             doSays();
             break;
         default:
@@ -51,17 +50,28 @@ function runApp(command, args) {
 //Twitter function
 function tweets() {
     const client = new Twitter(keys.twitter);
-    client.get('statuses/home_timeline', function (error, tweets, response) {
+    client.get('statuses/user_timeline', function (error, tweets, response) {
         if (!error) {
             tweets.forEach(tweet => {
-                
-                let username = tweet.user.name;
-                let tweetTime = tweet.created_at;
-                let tweetText = tweet.text;
+               
+                // let username = tweet.user.name;
+                // let tweetTime = tweet.created_at;
+                // let tweetText = tweet.text;
 
-                console.log("\nUsername: " + username + "\nTweet Time: " + tweetTime + "\nTweet Content: " + tweetText);
-    
-             });
+                // console.log("\nUsername: " + username + "\nTweet Time: " + tweetTime + "\nTweet Content: " + tweetText);
+
+
+                let tweets = [
+                    "Username: " + tweet.user.name,
+                    "Tweet Time: " + tweet.created_at,
+                    "Tweet Content: " + tweet.text
+                ].join('\n');
+
+                console.log(tweets);
+                fs.appendFile("log.txt", tweets + divider, function (err) {
+                    if (err) throw err;
+                });
+            });
         }
         else {
             console.log("No Tweets to Show")
@@ -73,20 +83,31 @@ function tweets() {
 //Spotify Function
 function spotify(args) {
     // console.log(args);
-
+    if (args.length === 0) {
+        args = "The Call of the Mountains"; // this song works
+        //args = "the sign"; // did not work
+    }
     const spotify = new Spotify(keys.spotify);
     spotify.search({ type: 'track', query: args, limit: 1 }, function (err, data) {
+
+
         if (err) {
             return console.log('Error occurred: ' + err);
         }
         else {
-            // var obj = JSON.parse(data)
-            let artists = data.tracks.items[0].album.artists[0].name;
-            let songTitle =data.tracks.items[0].name;
-            let link = data.tracks.items[0].preview_url;
-            let album = data.tracks.items[0].album.name;
 
-            console.log("\nArtists: " + artists + "\nSong Name: " + songTitle + "\nPreview Link: " + link + "\nAlbum Name: " + album);
+            let songData = [
+                "Artists: " + data.tracks.items[0].album.artists[0].name,
+                "Song Name: " + data.tracks.items[0].name,
+                "Preview Link: " + data.tracks.items[0].preview_url,
+                "Album Name: " + data.tracks.items[0].album.name
+            ].join('\n');
+
+            fs.appendFile("log.txt", songData + divider, function (err) {
+                if (err) throw err;
+            });
+
+            console.log(songData);
 
         }
     });
@@ -101,18 +122,22 @@ function movie(args) {
 
             var obj = JSON.parse(data)
 
-            let movieTitle = obj.Title;
-            let releaseYear = obj.Year;
-            let imdb = obj.imdbRating;
-            let rtRating = obj.Ratings[1].Value;
-            let location = obj.Country;
-            let language = obj.Language
-            let plot = obj.Plot;
-            let actors = obj.Actors;
+            let movieData = [
+                "Title: " + obj.Title,
+                "Release Year: " + obj.Year,
+                "IMDB Rating: " + obj.imdbRating,
+                "Rotten Tomatoes rating: " + obj.Ratings[1].Value,
+                "Production Location: " + obj.Country,
+                "Language: " + obj.Language,
+                "Movie Plot: " + obj.Plot,
+                "Main Actors: " + obj.Actors
+            ].join('\n');
 
-            console.log("\nTitle: " + movieTitle + "\nRelease Year: " + releaseYear + 
-                "\nIMDB Rating: " + imdb + "\nRotten Tomatoes rating: " + rtRating + 
-                "\nProduction Location: " + location + "\nLanguage: " + language + "\nMovie Plot: " + plot + "\nMain Actors: " + actors);
+            fs.appendFile("log.txt", movieData + divider, function (err) {
+                if (err) throw err;
+            });
+
+            console.log(movieData + divider);
 
         }
     });
@@ -132,4 +157,10 @@ function doSays() {
 
     });
 
+}
+
+function printCommand() {
+    fs.appendFile("log.txt", command + divS, function (err) {
+        if (err) throw err;
+    });
 }
