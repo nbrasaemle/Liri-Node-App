@@ -61,3 +61,59 @@ Language: English
 Movie Plot: In Ancient Polynesia, when a terrible curse incurred by the Demigod Maui reaches Moana's island, she answers the Ocean's call to seek out the Demigod to set things right.
 Main Actors: Auli'i Cravalho, Dwayne Johnson, Rachel House, Temuera Morrison
 -------------------------------------------------------------------------------
+my-tweets
+- - - - - - - - -
+Username: Nicole
+Tweet Time: Tue Jul 17 04:35:39 +0000 2018
+Tweet Content: hopefully got liri done
+-------------------------------------------------------------------------------
+Username: Nicole
+Tweet Time: Thu Jul 12 21:02:10 +0000 2018
+Tweet Content: portfolio looking great, needs a few fixes still
+-------------------------------------------------------------------------------
+Username: Nicole
+Tweet Time: Thu Jul 12 21:09:10 +0000 2018
+Tweet Content: working on liri
+-------------------------------------------------------------------------------
+Username: Nicole
+Tweet Time: Thu Jul 12 21:01:32 +0000 2018
+Tweet Content: Let's do this portfolio
+-------------------------------------------------------------------------------
+do-what-it-says
+- - - - - - - - -
+do-what-it-says
+- - - - - - - - -
+Artists: Backstreet Boys
+Song Name: I Want It That Way
+Preview Link: https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=8fffb4dce500486fb333de81c84fb78f
+Album Name: The Hits--Chapter One
+-------------------------------------------------------------------------------
+movie-this
+- - - - - - - - -
+Title: Mr. Nobody
+Release Year: 2009
+IMDB Rating: 7.9
+Rotten Tomatoes rating: 66%
+Production Location: Belgium, Germany, Canada, France, USA, UK
+Language: English, Mohawk
+Movie Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+Main Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+-------------------------------------------------------------------------------
+movie-this
+- - - - - - - - -
+Title: The Lion King
+Release Year: 1994
+IMDB Rating: 8.5
+Rotten Tomatoes rating: 93%
+Production Location: USA
+Language: English, Swahili, Xhosa, Zulu
+Movie Plot: A Lion cub crown prince is tricked by a treacherous uncle into thinking he caused his father's death and flees into exile in despair, only to learn in adulthood his identity and his responsibilities.
+Main Actors: Rowan Atkinson, Matthew Broderick, Niketa Calame-Harris, Jim Cummings
+-------------------------------------------------------------------------------
+spotify-this-song
+- - - - - - - - -
+Artists: *NSYNC
+Song Name: Bye Bye Bye
+Preview Link: https://p.scdn.co/mp3-preview/72b91cb27fac7beb50a2deffdd8b821fba5ba950?cid=8fffb4dce500486fb333de81c84fb78f
+Album Name: No Strings Attached
+-------------------------------------------------------------------------------
